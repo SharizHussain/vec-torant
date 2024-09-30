@@ -36,7 +36,7 @@ export default function Cart() {
         setItems(response.data.data);  // Store the fetched orders in the state
       })
       .catch(error => {
-        console.error("Error fetching orders:", error);
+        console.error("Error fetching orders:", error)
       });
   }, []);
 
