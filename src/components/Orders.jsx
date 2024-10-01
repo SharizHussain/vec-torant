@@ -2,12 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../Context";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import emptyCartGif from '/img/im-hungry-starving.gif'
 const projectId = import.meta.env.VITE_APP_PROJECT_ID;
 const environmentId = import.meta.env.VITE_APP_ENVIRONMENT_ID;
 
 export default function Cart() {
   const { items, setItems } = useContext(DataContext);
-  const [subTotal, setSubTotal] = useState(1);
+  const [subTotal, setSubTotal] = useState(null);
   const nav = useNavigate();
 
   const updateQty = (para, i) => {
@@ -40,6 +41,48 @@ export default function Cart() {
       });
   }, []);
 
+  const deleteItem = (item) => {
+    console.log(item._id);
+
+    axios.delete(`https://free-ap-south-1.cosmocloud.io/development/api/orders/${item._id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'projectId': projectId,
+        'environmentId': environmentId,
+      },
+      data: JSON.stringify({
+
+      }),
+    })
+      .then(response => {
+        console.log("Delete successful", response.data);
+        // Remove the deleted item from the state
+        setItems(prevItems => prevItems.filter(i => i._id !== item._id));
+      })
+      .catch(error => {
+        console.error("Error deleting item:", error);
+      });
+
+
+    //   try {
+    //     const response = await fetch(`https://free-ap-south-1.cosmocloud.io/development/api/orders/${item._id}`, {
+    //       method: 'DELETE',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //         'projectId': projectId,
+    //         'environmentId': environmentId
+    //       },
+    //       body: JSON.stringify({
+
+    //       }),
+    //     })
+    //     const result = await response.json()
+    //     console.log('Deleted ', result);
+
+    //   } catch (error) {
+    //     console.error("Can't Delete");
+    //   }
+  };
 
   const navigateBack = () => {
     nav(-1);
@@ -47,9 +90,14 @@ export default function Cart() {
 
   return (
     <>
-      {/* {subTotal === 0 && (
-        <h3 className="p-5">There is nothing added for orders</h3>
-      )} */}
+      {subTotal === 0 && (
+        <>
+          <h3 className="col-md-12 p-5 text-center">There is nothing added for orders</h3>
+          <div className="w-100 text-center">
+          <img src={emptyCartGif} alt="gif" className=""/>
+          </div>
+        </>
+      )}
       {subTotal > 0 && (
         <>
           <div
@@ -139,7 +187,6 @@ export default function Cart() {
                                       }
                                       className="form-select form-select-sm w-xl"
                                     >
-                                      {/* Dynamically generate options based on available quantity */}
                                       <option value="1">1</option>
                                       <option value="2">2</option>
                                       <option value="3">3</option>
@@ -149,11 +196,12 @@ export default function Cart() {
                                   </div>
                                 </div>
                               </div>
-                              <div className="col-md-3">
+                              <div className="col-md-3 d-flex justify-content-evenly">
                                 <div className="mt-3">
                                   <p className="text-muted mb-2">Total</p>
                                   <h5>{item.price * item.availableQuantity}</h5>
                                 </div>
+                                <i className="fa-solid fa-trash-can mt-5" id="deleteItem" onClick={() => deleteItem(item)}></i>
                               </div>
                             </div>
                           </div>

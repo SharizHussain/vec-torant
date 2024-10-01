@@ -494,7 +494,7 @@
   border-right: none;
 }
 
-/* Cart */
+/* Orders */
 
 #back{
   transition: 0.4s;
@@ -503,4 +503,9 @@
   cursor: pointer;
   background-color: var(--primary);
   color: #F1F8FF;
+}
+
+#deleteItem:hover{
+  cursor: pointer;
+  color: red;
 }
