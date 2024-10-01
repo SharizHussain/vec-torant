@@ -6,7 +6,7 @@ import Menu from "./components/Menu";
 import Team from "./components/Team";
 import Booking from './components/Booking';
 import Testimonial from "./components/Testimonial";
-import imgHero from "./assets/img/Unveiling-the-Life-of-a-Professional-Chef.webp"
+import imgHero from "/img/Unveiling-the-Life-of-a-Professional-Chef.webp"
 
 export default function Home() {
   return (

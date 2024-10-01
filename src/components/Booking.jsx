@@ -1,9 +1,9 @@
 import Navbar from "../Navbar"
 import Footer from "../Footer"
 import { PropTypes } from "prop-types"
-import imgHero from "../assets/img/peter-thomas-qXbueROjM9I-unsplash.jpg"
-import videoThumb from "../assets/img/team-4.jpg"
-import video from "../assets/img/invideo-ai-1080 Welcome to Vectorant Your Culinary and 2024-06-05(1) (online-video-cutter.com).mp4"
+import imgHero from "/img/peter-thomas-qXbueROjM9I-unsplash.jpg"
+import videoThumb from "/img/team-4.jpg"
+import video from "/img/invideo-ai-1080 Welcome to Vectorant Your Culinary and 2024-06-05(1) (online-video-cutter.com).mp4"
 
 export default function Booking({showCondition=true}) {
   return (

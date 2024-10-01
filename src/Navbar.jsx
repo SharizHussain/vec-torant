@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-import imgHero from "./assets/img/download2.png"
+import imgHero from "/img/download2.png"
 
 export default function Navbar({ prop = "Home", img = imgHero }) {
   useEffect(() => {

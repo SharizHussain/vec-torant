@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import imgHero from "../assets/img/88f18ce59ec1735607f46caa91c9a0fa.jpg";
-import imgAbout1 from "../assets/img/peter-thomas-qXbueROjM9I-unsplash.jpg"
-import imgAbout2 from "../assets/img/about-4.jpg"
-import imgAbout3 from "../assets/img/download1.png"
-import imgAbout4 from "../assets/img/premium_photo-1668916513964-fa8e252bafaf-transformed.jpeg"
+import imgHero from "/img/88f18ce59ec1735607f46caa91c9a0fa.jpg";
+import imgAbout1 from "/img/peter-thomas-qXbueROjM9I-unsplash.jpg"
+import imgAbout2 from "/img/about-4.jpg"
+import imgAbout3 from "/img/download1.png"
+import imgAbout4 from "/img/premium_photo-1668916513964-fa8e252bafaf-transformed.jpeg"
 
 import Team from "./Team";
 

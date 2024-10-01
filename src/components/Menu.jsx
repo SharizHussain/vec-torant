@@ -7,7 +7,7 @@ import { PropTypes } from "prop-types";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css';
 import { Link } from "react-router-dom";
-import imgHero from "../assets/img/download1.png";
+import imgHero from "/img/download1.png";
 const projectId = import.meta.env.VITE_APP_PROJECT_ID;
 const environmentId = import.meta.env.VITE_APP_ENVIRONMENT_ID;
 

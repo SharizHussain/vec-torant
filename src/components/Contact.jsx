@@ -1,6 +1,6 @@
 import Footer from '../Footer';
 import Navbar from '../Navbar';
-import imgHero from '../assets/img/clay-banks-AZDyU1hXtCE-unsplash.jpg'
+import imgHero from '/img/clay-banks-AZDyU1hXtCE-unsplash.jpg'
 
 export default function Contact() {
   return (

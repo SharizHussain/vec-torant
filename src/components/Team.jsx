@@ -1,14 +1,14 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
-import imgTeam1 from "../assets/img/team-4.jpg" 
-import imgTeam2 from "../assets/img/chef.jpg" 
-import imgTeam3 from "../assets/img/team-3.jpg" 
-import imgTeam4 from "../assets/img/depositphotos_174777760-stock-photo-handsome-bodyguard-listening-message-security1.jpg" 
-import imgTeam5 from "../assets/img/chef_in_uniform.jpeg"
-import imgTeam6 from "../assets/img/1696248310323.png"
-import imgTeam7 from "../assets/img/360_F_572230981_4X0ra8tqMPj1CPu8f2RXnt0NWtVBTC9g.jpg"
-import imgTeam8 from "../assets/img/Select-The-Best-From-This-Stellar-Range-Of-Mens-T-shirts-Louis-Philippe-Fashion-Blogs.jpg"
+import imgTeam1 from "/img/team-4.jpg" 
+import imgTeam2 from "/img/chef.jpg" 
+import imgTeam3 from "/img/team-3.jpg" 
+import imgTeam4 from "/img/depositphotos_174777760-stock-photo-handsome-bodyguard-listening-message-security1.jpg" 
+import imgTeam5 from "/img/chef_in_uniform.jpeg"
+import imgTeam6 from "/img/1696248310323.png"
+import imgTeam7 from "/img/360_F_572230981_4X0ra8tqMPj1CPu8f2RXnt0NWtVBTC9g.jpg"
+import imgTeam8 from "/img/Select-The-Best-From-This-Stellar-Range-Of-Mens-T-shirts-Louis-Philippe-Fashion-Blogs.jpg"
 
 export default function Team({ showCondition = true, subTeam = true }) {
   return (

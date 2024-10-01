@@ -1,9 +1,9 @@
 import Footer from '../Footer';
 import Navbar from '../Navbar';
-import imgTesti1 from "../assets/img/testimonial-1.jpg"
-import imgTesti2 from "../assets/img/testimonial-2.jpg"
-import imgTesti3 from "../assets/img/testimonial-3.jpg"
-import imgTesti4 from "../assets/img/testimonial-4.jpg"
+import imgTesti1 from "/img/testimonial-1.jpg"
+import imgTesti2 from "/img/testimonial-2.jpg"
+import imgTesti3 from "/img/testimonial-3.jpg"
+import imgTesti4 from "/img/testimonial-4.jpg"
 import "react-responsive-carousel/lib/styles/carousel.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel';
